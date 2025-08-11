@@ -1,0 +1,27 @@
+---
+import Social from "./Social.astro";
+
+const reddit = {
+    name: "Reddit",
+    platform: "reddit",
+    username: "Redzombieolme",
+    url: "https://www.reddit.com/user/Redzombieolme/",
+};
+---
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+<footer>
+    <Social platform="twitter" username="astrodotbuild" />
+    <Social platform="github" username="withastro" />
+    <Social platform="youtube" username="astrodotbuild" />
+    <p>
+        You can contact me on my <a
+            href={`https://www.${reddit.platform}.com/user/${reddit.username}/`}
+            >{reddit.name}</a>
+    </p>
+</footer>
